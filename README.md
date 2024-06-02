@@ -1,5 +1,5 @@
 # The-Last-Circle
- 2D Game for GameDev.tv Game Jam 2024
+ 2D shooter Game for GameDev.tv Game Jam 2024
 
 Play the game at https://ossi-05.itch.io/the-last-circle
 
