@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
+  - DeathRay
+  - Player
+  - Enemy
+  - Projectile
+  - Border
+  - Base
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Ground
+    uniqueID: 3244878701
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 4174939825
+    locked: 0
+  - name: Player
+    uniqueID: 1754087415
+    locked: 0
+  - name: Bullet
+    uniqueID: 615037659
+    locked: 0
+  - name: Building
+    uniqueID: 4135855635
+    locked: 0
+  - name: Top
+    uniqueID: 1168424861
+    locked: 0

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46517a61b0a6c2b40b5bb98a44b249d4, type: 3}
+  m_Name: AudioClips
+  m_EditorClassIdentifier: 
+  shoot: {fileID: 8300000, guid: 6489002d3689c5d4a8c87b347d26f78c, type: 3}
+  ShootVolume: 0.3
+  explosions:
+  - {fileID: 8300000, guid: 321c2df8bb0a40e40a628ea2897b46d9, type: 3}
+  - {fileID: 8300000, guid: f77fc5dc2d460124c83db10bc5751b65, type: 3}
+  - {fileID: 8300000, guid: 5d96b4e6d10a20248af04e788e54374c, type: 3}
+  - {fileID: 8300000, guid: ef4a404ab4378354d95dcc6809dcc08c, type: 3}
+  - {fileID: 8300000, guid: e3c15075dde128041b38f69dcca4268a, type: 3}
+  ExplosionVolume: 1
+  CountDownClips:
+  - {fileID: 8300000, guid: d181c21a362b038468fd2275d2886f79, type: 3}
+  - {fileID: 8300000, guid: 551df9fdc70ec9c458a0c7169102c001, type: 3}
+  - {fileID: 8300000, guid: 3c9321ab55129bb45bd49454c0e2f67f, type: 3}
+  - {fileID: 8300000, guid: d8d487fd865f8584fbfbf5aab627357a, type: 3}
+  CountDownVolume: 1
