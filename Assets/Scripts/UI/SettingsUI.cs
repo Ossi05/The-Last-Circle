@@ -14,7 +14,13 @@ public class SettingsUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI musicText;
     [SerializeField] TextMeshProUGUI soundEffectsText;
     void Awake()
-    {
+    {   
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
         musicButton.onClick.AddListener(() =>
         {

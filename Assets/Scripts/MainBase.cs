@@ -18,18 +18,12 @@ public class MainBase : MonoBehaviour, IDamageable
     private void Start()
     {
         health.OnDie += Health_OnDie;
-        health.OnHealthChanged += Health_OnHealthChanged;
     }
 
     void Health_OnDie(object sender, EventArgs e)
     {   
         OnBaseDestroyed?.Invoke(this, EventArgs.Empty);
         gameObject.SetActive(false);
-    }
-
-    void Health_OnHealthChanged(object sender, EventArgs e)
-    {
-        Debug.Log(health.GetCurrentHealth());
     }
 
     public void TakeDamage(int damage)
