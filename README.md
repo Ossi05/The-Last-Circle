@@ -5,8 +5,12 @@
 
 ## Music:
 https://opengameart.org/content/nes-shooter-music-5-tracks-3-jingles
+
 https://opengameart.org/content/free-music-pack
 
-## Sound effects:
+## Effects:
 https://www.kenney.nl/assets/sci-fi-sounds
+
 https://www.kenney.nl/assets/voiceover-pack
+
+https://assetstore.unity.com/packages/vfx/particles/fire-explosions/free-2d-impact-fx-201222
