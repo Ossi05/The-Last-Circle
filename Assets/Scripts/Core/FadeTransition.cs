@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class FadeTransition : MonoBehaviour
@@ -50,12 +48,20 @@ public class FadeTransition : MonoBehaviour
         animator.SetTrigger(FADE_IN);
     }
 
-    public async Task FadeInToOut()
+    public void FadeInToOutOnGameOver()
     {
         FadeIn();
-        await Task.Delay(1000);
+        StartCoroutine(WaitToFadeOut());
+        
+    }
+
+    IEnumerator WaitToFadeOut()
+    {
+        yield return fadeInTime;
+        GameOverUI.Instance.HandleGameOver();
         FadeOut();
     }
+
 
 
 

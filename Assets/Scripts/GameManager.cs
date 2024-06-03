@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -110,7 +109,6 @@ public class GameManager : MonoBehaviour
                 gamePlayingTimer += Time.deltaTime;
                 break;
             case state.GameOver:
-               // Time.timeScale = 0;
                 break;
         }
     }

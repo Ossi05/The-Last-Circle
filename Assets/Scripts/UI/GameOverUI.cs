@@ -9,6 +9,8 @@ public class GameOverUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI enemiesKilledText;
     [SerializeField] TextMeshProUGUI totalPlayTimeText;
 
+    public static GameOverUI Instance;
+
     const string GAME_LOST_TEXT = "YOU LOSE!";
     const string GAME_WON_TEXT = "YOU WIN!";
 
@@ -18,34 +20,50 @@ public class GameOverUI : MonoBehaviour
         Hide();
     }
 
-    void GameManager_OnStateChanged(object sender, System.EventArgs e)
+    void Awake()
     {
-        HandleGameOver();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    async void HandleGameOver()
+    void GameManager_OnStateChanged(object sender, System.EventArgs e)
     {
         if (GameManager.Instance.IsGameOver())
-        {   
+        {
             if (FadeTransition.Instance != null)
             {
-                await FadeTransition.Instance.FadeInToOut();
-            }
-
-            if (GameManager.Instance.IsGameWon())
-            {
-                gameOverTitleText.text = GAME_WON_TEXT;
+                FadeTransition.Instance.FadeInToOutOnGameOver();
             }
             else
             {
-                gameOverTitleText.text = GAME_LOST_TEXT;
+                HandleGameOver();
             }
+        }      
+    }
 
-            enemiesKilledText.text = GameManager.Instance.GetEnemiesKilled().ToString();
-            UpdateTimeText();
+    public void HandleGameOver()
+    {
+        if (!GameManager.Instance.IsGameOver()) { return; }
 
-            Show();
+        if (GameManager.Instance.IsGameWon())
+        {
+            gameOverTitleText.text = GAME_WON_TEXT;
         }
+        else
+        {
+            gameOverTitleText.text = GAME_LOST_TEXT;
+        }
+
+        enemiesKilledText.text = GameManager.Instance.GetEnemiesKilled().ToString();
+        UpdateTimeText();
+
+        Show();
     }
 
     void UpdateTimeText()
